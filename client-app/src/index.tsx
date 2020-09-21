@@ -10,7 +10,7 @@ import App from "./app/layout/App";
 import * as serviceWorker from "./serviceWorker";
 import ScrollToTop from "./app/layout/ScrollToTop";
 import dateFnsLocalizer from "react-widgets-date-fns";
-import { WelcomePage } from "./app/pages/welcome-page/WelcomePage";
+import WelcomePage from "./app/pages/welcome-page/WelcomePage";
 dateFnsLocalizer();
 
 export const history = createBrowserHistory();
@@ -18,7 +18,7 @@ export const history = createBrowserHistory();
 ReactDOM.render(
   <Router history={history}>
     <Switch>
-      <Route path="/welcome" exact component={WelcomePage} />
+      <Route path="/welcome" component={WelcomePage} />
       <ScrollToTop>
         <App />
       </ScrollToTop>
